@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricians Triangle | We Handle Residential & Light Commercial Electrical</title>
+    <meta name="description" content="Electrical services in Wake County. Residential and light commercial electrical work across the Triangle.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .hero {
+            background: #c2410c;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .scope-section {
+            margin-bottom: 3rem;
+        }
+        .scope-section h2 {
+            color: #ea580c;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .scope-card {
+            background: #ffedd5;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #ea580c;
+        }
+        .scope-card h3 {
+            color: #ea580c;
+            margin-bottom: 1rem;
+        }
+        .scope-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .boundaries-section {
+            background: #fef3c7;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            border-left: 4px solid #fbbf24;
+        }
+        .boundaries-section h2 {
+            color: #92400e;
+            margin-bottom: 1.5rem;
+        }
+        .boundaries-list {
+            list-style: none;
+            padding: 0;
+        }
+        .boundaries-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #78350f;
+        }
+        .boundaries-list li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .specialty-section {
+            background: #ecfdf5;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        .specialty-section h2 {
+            color: #065f46;
+            margin-bottom: 1rem;
+        }
+        .specialty-section h3 {
+            color: #047857;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        .specialty-section p {
+            color: #555;
+            line-height: 1.8;
+        }
+        .cta-section {
+            background: #ea580c;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #ea580c;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #ea580c;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #c2410c;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Electricians Triangle</div>
+            <div class="phone">📞 (919) 635-9141</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>We Handle Residential & Light Commercial Electrical</h1>
+        <p>Focused electrical services across Wake County and the Triangle.</p>
+    </section>
+
+    <div class="container">
+        <section class="scope-section">
+            <h2>Our Service Scope</h2>
+            <div class="scope-grid">
+                <div class="scope-card">
+                    <h3>🏡 Residential Electrical</h3>
+                    <p>Wiring repairs, panel upgrades, outlet installation, lighting, ceiling fans, and whole-home electrical work.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>🔌 Electrical Repairs</h3>
+                    <p>Fix outlets not working, circuit breaker issues, flickering lights, and troubleshooting electrical problems.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>💡 Lighting Installation</h3>
+                    <p>Indoor and outdoor lighting. Recessed lights, chandeliers, landscape lighting, and LED upgrades.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>⚡ Panel Upgrades</h3>
+                    <p>Replace outdated electrical panels. Increase capacity for modern homes and appliances.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>🏢 Light Commercial</h3>
+                    <p>Small offices, retail spaces, and light commercial electrical work.</p>
+                </div>
+
+                <div class="scope-card">
+                    <h3>🚗 EV Charger Installation</h3>
+                    <p>Install home EV charging stations with proper wiring and circuits.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="boundaries-section">
+            <h2>What We Don't Handle</h2>
+            <ul class="boundaries-list">
+                <li>Large commercial buildings and industrial facilities</li>
+                <li>High-voltage utility work</li>
+                <li>Telecommunications and low-voltage networking</li>
+                <li>Generator installations (refer to specialists)</li>
+            </ul>
+        </section>
+
+        <section class="specialty-section">
+            <h2>Why Limit Our Scope?</h2>
+            <p>We focus on residential and light commercial electrical work because that's where we deliver the best results. Home electrical systems are different from large commercial or industrial setups—different codes, different equipment, different challenges.</p>
+            
+            <h3>What This Means for You</h3>
+            <p>You get electricians who specialize in homes and small businesses. We're familiar with typical Triangle-area homes—older neighborhoods in Raleigh with outdated wiring, newer construction in Cary and Apex, and everything in between.</p>
+            
+            <p>Large commercial electrical work requires different licensing, equipment, and expertise. By staying focused, we serve homeowners and small business owners better.</p>
+        </section>
+
+        <div class="cta-section">
+            <h2>Need Electrical Work Done?</h2>
+            <p>Get reliable service from electricians who specialize in homes and small businesses</p>
+            <a href="tel:9196359141" class="cta-btn">Call (919) 635-9141</a>
+        </div>
+
+        <section class="form-section">
+            <h2>Contact Us</h2>
+            <p class="subtitle">Tell us about your electrical needs</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="WAKE-ELEC-001">
+                <input type="hidden" name="market" value="Wake County">
+                <input type="hidden" name="industry" value="Electricians">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="electricianstriangle.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service_type">Service Needed *</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="">Select...</option>
+                        <option value="Electrical Repair">Electrical Repair</option>
+                        <option value="Outlet/Switch">Outlet/Switch</option>
+                        <option value="Lighting">Lighting</option>
+                        <option value="Panel Upgrade">Panel Upgrade</option>
+                        <option value="EV Charger">EV Charger</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Project Description *</label>
+                    <textarea id="details" name="details" required placeholder="Describe your electrical needs..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Get In Touch</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Electricians Triangle. Professional Electrical Services.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
